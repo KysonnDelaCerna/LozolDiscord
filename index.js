@@ -12,6 +12,9 @@ client.on('message', message => {
     if (message.content.toLowerCase().indexOf('suspension') !== -1 || message.content.toLowerCase().indexOf('suspend') !== -1) {
         message.channel.send(`> ${message.content}\n<@${message.author.id}> sorry no suspension :(((`);
     }
+    if (message.content.toLowerCase().indexOf('money') !== -1 || message.content.toLowerCase().indexOf('cash') !== -1) {
+        message.channel.send(`> ${message.content}\n<@${message.author.id}> I like money`);
+    }
     if (message.content.indexOf('700390950832177242') !== -1 || message.content.toLowerCase().indexOf('lozol') !== -1 || message.content.toLowerCase().indexOf('la salle') !== -1 || message.content.toLowerCase().indexOf('dlsu') !== -1 || message.content.toLowerCase().indexOf('lasalle') !== -1) {
        message.react('699509158248185856');
     }
