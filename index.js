@@ -16,9 +16,7 @@ client.on('message', message => {
        message.react('699509158248185856');
     }
     if (message.content.toLowerCase().indexOf('up') !== -1 || message.content.toLowerCase().indexOf('ateneo') !== -1 || message.content.toLowerCase().indexOf('areneo') !== -1 || message.content.toLowerCase().indexOf('admu') !== -1 || message.content.toLowerCase().indexOf('ust') !== -1) {
-        message.react('🇬');
-        message.react('🇦');
-        message.react('🇾');
+        message.react('🇬').then(message.react('🇦')).then(message.react('🇾'));
     }
 });
 
