@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const PREFIX = 'lozol';
 
 client.on('message', message => {
     if (message.author.id == 700390950832177242) {
@@ -20,6 +21,12 @@ client.on('message', message => {
     }
     if (message.content.toLowerCase().indexOf('up') !== -1 || message.content.toLowerCase().indexOf('ateneo') !== -1 || message.content.toLowerCase().indexOf('areneo') !== -1 || message.content.toLowerCase().indexOf('admu') !== -1 || message.content.toLowerCase().indexOf('ust') !== -1) {
         message.react('🇬').then(message.react('🇦')).then(message.react('🇾'));
+    }
+
+    if (message.content.toLowerCase() === `${PREFIX} pull`) {
+        for (let i = 0; i < 10; i++) {
+            message.channel.send('$m');
+        }
     }
 });
 
